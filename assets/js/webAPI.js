@@ -10,7 +10,6 @@ $(function () {
         }
         //对身份进行认证
         options.complete = function (res) {
-            console.log(res);
             if (res.responseJSON.status == 0 && res.responseJSON.message == '获取用户基本信息失败！') {
                 location.href = '/login.html'
                 localStorage.removeItem('token')

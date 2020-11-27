@@ -1,5 +1,5 @@
 $(function () {
-    initUserInfo()
+    getUserInfo()
     //退出功能
     $('#btnLogout').on('click', function () {
         layer.confirm('是否要提出？', {
@@ -15,7 +15,7 @@ $(function () {
 //获取layui变量声明
 var layer = layui.layer
 //获取用户信息
-function initUserInfo() {
+function getUserInfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
